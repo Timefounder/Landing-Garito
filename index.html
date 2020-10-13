@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T:F - Timefounder</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bulma-slider@2.0.4/dist/js/bulma-slider.min.js" integrity="sha256-5SDp724yI+z7tQtGSdI4r1qFr5FhgArR0APayA10jyQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.css" integrity="sha512-RVXK2JBDey8voSjvx1uTfOHjbIya6KE+ccmslcQEh5i5ZDS6u7Z2sJgTbwnXcqT1xcRIu+SogQRd7zVtfvqVOw==" crossorigin="anonymous" />
+    <style>
+      #inicio {
+        background-image: url('/hero.jpg');
+        background-size: cover;
+      }
+
+      #inicio .box {
+        width: 45%;
+      }
+
+      #worker {
+        background-image: url('/pxfuel-com-free-photo-obyvh.jpg');
+        background-size: cover;
+      }
+
+      #entrepreneur {
+        background-image: url('/pxfuel-com-free-photo-qqkwc.jpg');
+        background-size: cover;
+      }
+
+      #investor {
+        background-image: url('/quoteinspector-com-coins-pen-charts-md.jpg');
+        background-size: cover;
+      }
+
+      a.hero {
+        opacity: 75%;
+      }
+
+      a.hero:hover {
+        opacity: 100%;
+      }
+
+      .slider {
+        width: 100%;
+      }
+    </style>
+    <script>
+      window.addEventListener('load', function () {
+        slider.addEventListener('input', function () {
+          const horas = document.getElementById('horas');
+          const tokens = document.getElementById('tokens');
+          horas.innerHTML = slider.value;
+          tokens.innerHTML = new Intl.NumberFormat().format(slider.value * 60);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#inicio"><img src="https://i.ibb.co/tDNKvyt/logo.gif"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#calculadora" class="navbar-item">Calculadora</a>
+          <a href="#perfiles" class="navbar-item">Perfiles</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="https://trello.timefounder.com" class="button is-primary"><strong>App</strong></a>
+              <a class="button is-light">Tumaka</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="inicio" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <div class="box has-background-black">
+            <h1 class="title has-text-white">La inversión de tu vida</h1>
+            <h2 class="subtitle has-text-white">Porque donde inviertes tu tiempo es importante</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculadora" class="mb-0">
+      <div class="columns">
+        <div class="column">
+          <section class="hero is-fullheight">
+            <div class="hero-body">
+              <div class="container">
+                <h2 class="subtitle">A lo largo de la vida de un adulto, asi gastamos el tiempo del que disponemos (ideal y aproximadamente):</h2>
+                <table class="table ml-6">
+                  <thead>
+                    <tr>
+                      <th>Actividad</th><th>Horas</th><th>Al año</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dormir</td><td class="has-text-centered">8h</td><td class="has-text-right">2848</td>
+                    </tr>
+                    <tr>
+                      <td>Trabajar</td><td class="has-text-centered">8h</td><td class="has-text-right">1936</td>
+                    </tr>
+                    <tr>
+                      <td>Familia</td><td class="has-text-centered">2h</td><td class="has-text-right">730</td>
+                    </tr>
+                    <tr>
+                      <td>Ocio</td><td class="has-text-centered">2h</td><td class="has-text-right">730</td>
+                    </tr>
+                    <tr>
+                      <td>Comer</td><td class="has-text-centered">2h</td><td class="has-text-right">730</td>
+                    </tr>
+                    <tr>
+                      <td>Deporte</td><td class="has-text-centered">1h</td><td class="has-text-right">242</td>
+                    </tr>
+                    <tr>
+                      <td>Desplazamientos</td><td class="has-text-centered">1h</td><td class="has-text-right">365</td>
+                    </tr>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th colspan="2">Total</th><th class="has-text-right">7581</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="column">
+          <section class="hero is-fullheight is-light">
+            <div class="hero-body">
+              <div class="container">
+                <p class="mb-5">Teniendo en cuenta que, en un año, tenemos <strong>8016 horas</strong> (con 1 mes de vacaciones) y que necesitamos <strong>7581</strong> para vivir, disponemos de <span class="is-size-3">435</span> horas para invertir</p>
+                <div class="box">
+                  <div class="field">
+                    <label for="slider" class="label">De esas 435 horas cuantas quieres invertir:</label>
+                    <div class="control">
+                      <input id="slider" class="slider" type="range" step="1" min="1" max="435" value="435">
+                    </div>
+                  </div>
+                  <p>Invirtiendo <span id="horas" class="is-size-4">435</span> horas generarias <span id="tokens" class="is-size-4">26.100</span> T:F's</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="perfiles">
+      <div class="columns is-gapless">
+        <div class="column">
+          <a href="/timefounder.html?worker" id="worker" class="hero is-fullheight">
+            <div class="hero-body">
+              <div class="container">
+                <div class="box has-background-black">
+                  <h1 class="title has-text-white">Soy un trabajador</h1>
+                  <h2 class="subtitle has-text-white">Me gano la vida trabajando para otros</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="/timefounder.html?entrepreneur" id="entrepreneur" class="hero is-fullheight">
+            <div class="hero-body">
+              <div class="container">
+                <div class="box has-background-black">
+                  <h1 class="title has-text-white">Soy un emprendedor</h1>
+                  <h2 class="subtitle has-text-white">Me gusta traer ideas a la realidad</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="column">
+          <a href="/timefounder.html?investor" id="investor" class="hero is-fullheight">
+            <div class="hero-body">
+              <div class="container">
+                <div class="box has-background-black">
+                  <h1 class="title has-text-white">Soy un inversor</h1>
+                  <h2 class="subtitle has-text-white">Ayudo a otros a montar negocios</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

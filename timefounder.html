@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>T:F - Timefounder</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.css" integrity="sha512-RVXK2JBDey8voSjvx1uTfOHjbIya6KE+ccmslcQEh5i5ZDS6u7Z2sJgTbwnXcqT1xcRIu+SogQRd7zVtfvqVOw==" crossorigin="anonymous" />
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+    <script>
+      window.addEventListener('load', function () {
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const data = { name: e.target.name.value, email: e.target.email.value, subject: e.target.subject.value, msg: e.target.message.value }
+          console.log(data);
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/"><img src="https://i.ibb.co/tDNKvyt/logo.gif"></a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a href="#que" class="navbar-item">Que</a>
+          <a href="#como" class="navbar-item">Como</a>
+          <a href="#empecemos" class="navbar-item">Empecemos</a>
+          <a href="#contacta" class="navbar-item">Contacta</a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a href="https://trello.timefounder.com" class="button is-primary"><strong>App</strong></a>
+              <a class="button is-light">Tumaka</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="columns">
+      <div class="column is-narrow">
+        <div class="hero is-fullheight">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">Te presentamos TIMEFOUNDER</h1>
+              <h2 class="subtitle">Relaciones creativas justas y duraderas</h2>
+              <a href="https://trello.timefounder.com" class="button is-primary is-pulled-right">
+                ¡Quiero empezar ya!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="hero is-fullheight">
+          <div class="hero-body">
+            <div class="container">
+              <img src="/Comando-Molekulon.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="que" class="hero is-fullheight is-dark">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Timefounder te convierte en inversor, de tiempo</h1>
+          <p>¿Cuantas veces has pensado que tu haces la mayor parte del trabajo pero tu jefe se lleva la mayor parte del beneficio?</p>
+          <p>Normal, tu cobras cada mes, si hay clientes o no ya que se apañe el jefe</p>
+          <p>Esto sería que tu jefe corre mas riesgos, es normal que se lleve mas beneficio</p>
+          <p>FALSO: tu jefe y tu compartis riesgos. Si no espera a ver que pasa si le va mal el tiempo suficiente: al paro</p>
+          <p>La realidad es que los dos estais invirtiendo tiempo vital</p>
+          <p>Es hora de que asumas tu papel de inversor</p>
+          <p>Al fin y al cabo, el exito de la empresa depende de todo el equipo</p>
+          <p>Timefounder es contabilidad de valor: si has aportado el 25% del valor del producto o servicio, es justo que te lleves el 25% del beneficio</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="como" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">¿Como?</h1>
+          <div class="columns">
+            <div class="column has-text-centered">
+              <h2 class="subtitle">Usa tu Trello como siempre</h2>
+              <img src="/Rewards.png" width="50%">
+            </div>
+            <div class="column has-text-centered">
+              <h2 class="subtitle">Anota las aportaciones de valor</h2>
+              <img src="/Card.png" width="75%">
+              <img src="/Card2.png" width="75%">
+            </div>
+            <div class="column has-text-centered">
+              <h2 class="subtitle">Esto es lo que te corresponde</h2>
+              <img src="/Ranking.png" width="50%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="empecemos" class="columns">
+      <div class="column">
+        <section class="hero is-fullheight">
+          <div class="hero-body">
+            <div class="container has-text-centered">
+              <h2 class="title">No tengo cuenta de Trello</h2>
+              <a href="https://trello.com/signup" target="_blank" class="button">Registrate antes de empezar</a>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="column">
+        <section class="hero is-fullheight">
+          <div class="hero-body has-background-dark">
+            <div class="container has-text-centered">
+              <img src="https://i.ibb.co/tDNKvyt/logo.gif" width="75%">
+              <a href="https://trello.timefounder.com" class="button is-primary is-large">Registrate en Timefounder</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section id="contacta" class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container">
+          <form id="contact-form">
+            <div class="columns">
+              <div class="column is-6 is-offset-3 has-background-light">
+                <h2 class="title">Contacta</h2>
+                <h3 class="subtitle">Si necesitas hablar con nosotros</h3>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <label for="name" class="label">Nombre</label>
+                      <div class="control">
+                        <input id="name" class="input" type="text" placeholder="John Doe">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="field">
+                      <label for="email" class="label">Email</label>
+                      <div class="control has-icons-left">
+                        <input id="email" class="input" type="email" placeholder="johndoe@example.org">
+                        <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <label for="subject" class="label">Asunto</label>
+                      <div class="control">
+                        <input id="subject" class="input" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                      <label for="message" class="label">Mensaje</label>
+                      <div class="control">
+                        <textarea id="message" class="textarea"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column has-text-centered">
+                    <button id="submitBtn" class="button is-primary is-outlined">Enviar mensaje</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
