@@ -46,7 +46,24 @@
       }
     </style>
     <script>
+      function createObserver(panel, menu) {
+        let observer = new IntersectionObserver(entries => {
+          const link = document.getElementById(menu);
+          if (entries[0].isIntersecting) {
+            link.classList.add('has-text-white');
+            link.classList.add('has-background-primary');
+          } else {
+            link.classList.remove('has-text-white');
+            link.classList.remove('has-background-primary');
+          }
+        }, { threshold: 0.5 });
+        observer.observe(document.getElementById(panel));
+      }
+
       window.addEventListener('load', function () {
+        createObserver('calculadora', 'calculadora-menu');
+        createObserver('perfiles', 'perfiles-menu');
+
         slider.addEventListener('input', function () {
           const horas = document.getElementById('horas');
           const tokens = document.getElementById('tokens');
@@ -67,15 +84,15 @@
         </a>
       </div>
       <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
-          <a href="#calculadora" class="navbar-item">Calculadora</a>
-          <a href="#perfiles" class="navbar-item">Perfiles</a>
+        <div id="menu" class="navbar-start">
+          <a id="calculadora-menu" href="#calculadora" class="navbar-item">Calculadora</a>
+          <a id="perfiles-menu" href="#perfiles" class="navbar-item">Como te identificas</a>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
               <a href="https://trello.timefounder.com" class="button is-primary"><strong>App</strong></a>
-              <a class="button is-light">Tumaka</a>
+              <a href="https://chrome.google.com/webstore/detail/tfs-tumaka/hjkkjhlclibnjcmhjpbadlodimobmlch?hl=es" target="_blank" class="button is-light">Tumaka</a>
             </div>
           </div>
         </div>
