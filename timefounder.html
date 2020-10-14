@@ -7,6 +7,29 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.css" integrity="sha512-RVXK2JBDey8voSjvx1uTfOHjbIya6KE+ccmslcQEh5i5ZDS6u7Z2sJgTbwnXcqT1xcRIu+SogQRd7zVtfvqVOw==" crossorigin="anonymous" />
+    <style>
+      @media (max-width: 769px) {
+        #inicio {
+          background-image: url('/Comando-Molekulon-min.png');
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: 50% 25%;
+        }
+
+        #inicio .container {
+          position: relative;
+          top: 20%;
+        }
+
+        #empecemos .hero {
+          height: 50vh;
+        }
+      }
+
+      #empecemos .hero {
+        height: 100vh;
+      }
+    </style>
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <script>
       function createObserver(panel, menu) {
@@ -24,6 +47,18 @@
       }
 
       window.addEventListener('load', function () {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+
         const args = new URLSearchParams(window.location.search);
         if (args.has('worker')) {
           const entrepreneur = document.getElementById('entrepreneur');
@@ -86,7 +121,7 @@
     </script>
   </head>
   <body>
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/"><img src="https://i.ibb.co/tDNKvyt/logo.gif"></a>
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -115,23 +150,26 @@
 
     <div class="columns">
       <div class="column is-narrow">
-        <div class="hero is-fullheight">
+        <div id="inicio" class="hero is-fullheight">
           <div class="hero-body">
             <div class="container">
               <h1 class="title">Te presentamos TIMEFOUNDER</h1>
               <h2 class="subtitle">Relaciones creativas justas y duraderas</h2>
-              <a href="https://trello.timefounder.com" class="button is-primary is-pulled-right">
+              <a href="https://trello.timefounder.com" class="button is-primary is-pulled-right is-hidden-touch">
+                ¡Quiero empezar ya!
+              </a>
+              <a href="https://trello.timefounder.com" class="button is-primary is-hidden-desktop">
                 ¡Quiero empezar ya!
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="column">
+      <div class="column is-hidden-mobile">
         <div class="hero is-fullheight">
           <div class="hero-body">
             <div class="container">
-              <img src="/Comando-Molekulon.png">
+              <img src="/Comando-Molekulon-min.png">
             </div>
           </div>
         </div>
@@ -205,7 +243,8 @@
       </div>
     </section>
 
-    <div id="empecemos" class="columns">
+    <span id="empecemos"></span>
+    <div class="columns is-hidden-touch">
       <div class="column">
         <section class="hero is-fullheight">
           <div class="hero-body">
@@ -227,6 +266,24 @@
         </section>
       </div>
     </div>
+
+    <section class="hero is-halfheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h2 id="empecemos-title" class="title is-hidden-desktop has-text-centered">Empecemos:</h2>
+          <h2 class="is-size-3">No tengo cuenta de Trello</h2>
+          <a href="https://trello.com/signup" target="_blank" class="button">Registrate antes de empezar</a>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-halfheight">
+      <div class="hero-body has-background-dark">
+        <div class="container has-text-centered">
+          <img src="https://i.ibb.co/tDNKvyt/logo.gif" width="75%">
+          <a href="https://trello.timefounder.com" class="button is-primary is-large">Registrate en Timefounder</a>
+        </div>
+      </div>
+    </section>
 
     <section id="contacta" class="hero is-fullheight">
       <div class="hero-body">

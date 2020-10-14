@@ -10,27 +10,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/regular.css" integrity="sha512-RVXK2JBDey8voSjvx1uTfOHjbIya6KE+ccmslcQEh5i5ZDS6u7Z2sJgTbwnXcqT1xcRIu+SogQRd7zVtfvqVOw==" crossorigin="anonymous" />
     <style>
       #inicio {
-        background-image: url('/hero.jpg');
+        background-image: url('/hero-min.jpg');
         background-size: cover;
       }
 
-      #inicio .box {
-        width: 45%;
+      @media (min-width: 769px) {
+        #inicio .box {
+          width: 45%;
+        }
       }
 
-      #worker {
+      @media (max-width: 769px) {
+        #inicio {
+          background-repeat: no-repeat;
+          background-position: 70% 25%;
+        }
+      }
+
+      #worker, #worker-mobile {
         background-image: url('/pxfuel-com-free-photo-obyvh.jpg');
         background-size: cover;
       }
 
-      #entrepreneur {
-        background-image: url('/pxfuel-com-free-photo-qqkwc.jpg');
+      #entrepreneur, #entrepreneur-mobile {
+        background-image: url('/pxfuel-com-free-photo-qqkwc-min.jpg');
         background-size: cover;
       }
 
-      #investor {
+      #investor, #investor-mobile {
         background-image: url('/quoteinspector-com-coins-pen-charts-md.jpg');
         background-size: cover;
+      }
+
+      .profile {
+        min-height: 30vh;
       }
 
       a.hero {
@@ -61,6 +74,18 @@
       }
 
       window.addEventListener('load', function () {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+
         createObserver('calculadora', 'calculadora-menu');
         createObserver('perfiles', 'perfiles-menu');
 
@@ -74,7 +99,7 @@
     </script>
   </head>
   <body>
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="#inicio"><img src="https://i.ibb.co/tDNKvyt/logo.gif"></a>
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -116,8 +141,10 @@
           <section class="hero is-fullheight">
             <div class="hero-body">
               <div class="container">
-                <h2 class="subtitle">A lo largo de la vida de un adulto, asi gastamos el tiempo del que disponemos (ideal y aproximadamente):</h2>
-                <table class="table ml-6">
+                <h2 class="subtitle">
+                  A lo largo de la vida de un adulto, asi gastamos el tiempo del que disponemos (ideal y aproximadamente):
+                </h2>
+                <table class="table">
                   <thead>
                     <tr>
                       <th>Actividad</th><th>Horas</th><th>Al año</th>
@@ -143,7 +170,9 @@
                       <td>Deporte</td><td class="has-text-centered">1h</td><td class="has-text-right">242</td>
                     </tr>
                     <tr>
-                      <td>Desplazamientos</td><td class="has-text-centered">1h</td><td class="has-text-right">365</td>
+                      <td class="is-hidden-touch">Desplazamientos</td>
+                      <td class="is-hidden-desktop">Desplaz.</td>
+                      <td class="has-text-centered">1h</td><td class="has-text-right">365</td>
                     </tr>
                     </tr>
                   </tbody>
@@ -178,7 +207,8 @@
       </div>
     </section>
 
-    <section id="perfiles">
+    <span id="perfiles"></span>
+    <section class="is-hidden-touch">
       <div class="columns is-gapless">
         <div class="column">
           <a href="/timefounder.html?worker" id="worker" class="hero is-fullheight">
@@ -218,5 +248,31 @@
         </div>
       </div>
     </section>
+
+    <h2 class="title has-text-centered is-hidden-desktop">Te defines...</h2>
+    <div id="worker-mobile" class="profile is-hidden-desktop">
+      <a href="/timefounder.html?worker">
+        <div class="box has-background-black">
+          <h1 class="title has-text-white">Como trabajador</h1>
+          <h2 class="subtitle has-text-white">Me gano la vida trabajando para otros</h2>
+        </div>
+      </a>
+    </div>
+    <div id="entrepreneur-mobile" class="profile is-hidden-desktop">
+      <a href="/timefounder.html?entrepreneur">
+        <div class="box has-background-black">
+          <h1 class="title has-text-white">Como emprendedor</h1>
+          <h2 class="subtitle has-text-white">Me gusta traer ideas a la realidad</h2>
+        </div>
+      </a>
+    </div>
+    <div id="investor-mobile" class="profile is-hidden-desktop">
+      <a href="/timefounder.html?investor">
+        <div class="box has-background-black">
+          <h1 class="title has-text-white">Como inversor</h1>
+          <h2 class="subtitle has-text-white">Ayudo a otros a montar negocios</h2>
+        </div>
+      </a>
+    </div>
   </body>
 </html>
